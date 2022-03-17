@@ -81,14 +81,12 @@ document.addEventListener("DOMContentLoaded", () => {
           headers: {
             "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
             "x-rapidapi-key": "8f64bab846mshf3f9be435e389f9p1e6211jsn3e1aa3a9fc67",
-            // my key : 8f64bab846mshf3f9be435e389f9p1e6211jsn3e1aa3a9fc67
           },
         })
           .then((res) => {
             if (!res.ok) {
               throw Error();
             }
-            console.log("hi");
             const firstLetterId = guessedWordCount * 5 + 1;
             const interval = 200;
             currentWordArr.forEach((letter, index) => {
@@ -125,6 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let i = 0; i < 30; i++) {
             let square = document.createElement("div");
             square.classList.add("square");
+            square.classList.add("animate__animated");
             square.setAttribute("id", i + 1);
             gameBoard.appendChild(square);
         }

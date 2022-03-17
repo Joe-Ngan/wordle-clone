@@ -104,3 +104,11 @@ header{
 .spacer-half{
     flex-grow: 0.5;
 }
+
+@media (max-width: 768px) {
+    .square{
+        min-width: 40px;
+        min-height: 40px;
+        font-size : 30px;
+    }
+}
